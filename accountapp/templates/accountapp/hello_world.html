@@ -6,6 +6,13 @@
 </head>
 <body>
 
+    <form action="/accounts/hello_world/" method="post">
+        {% csrf_token %}
+
+        <input type="text" name="input_data">
+        <input type="submit">
+
+    </form>
     <h1>hello_world!</h1>
 
 </body>
