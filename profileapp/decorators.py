@@ -10,4 +10,4 @@ def profile_ownership_required(func):
             return HttpResponseForbidden()
         else:
             return func(request, *args, **kwargs)
-    return
+    return decorated
