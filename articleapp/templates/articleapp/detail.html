@@ -22,7 +22,18 @@
 
     </div>
 
+    <div>
+      {% if target_article.writer == user %}
+      <div>
+        <a href="{% url 'articleapp:update' pk=target_article.pk %}">Update Article</a>
+      </div>
+      <div>
+        <a href="{% url 'articleapp:delete' pk=target_article.pk %}">Delete Article</a>
+      </div>
+      {% endif %}
+    </div>
+
   </div>
 
 
-{% endblock %} 
+{% endblock %}
