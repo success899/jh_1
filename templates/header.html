@@ -11,12 +11,15 @@
         <span>
             {% if not user.is_authenticated %}
             <a href="{% url 'accountapp:login' %}">
-                Login
+                LogIn
             </a>
             <a href="{% url 'accountapp:create' %}">
-                Signup
+                SignUp
             </a>
             {% else %}
+            <a href="{% url 'accountapp:detail' pk=user.pk %}">
+                MyPage
+            </a>
             <a href="{% url 'accountapp:logout' %}">
                 Logout
             </a>
